@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="description" content="HisabPro — a bilingual financial intelligence platform for personal, family and business finances in Bangladesh." />
+  <meta name="theme-color" content="#0A5C4A" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="HisabPro" />
+  <title>HisabPro — Your Complete Financial Intelligence Platform</title>
+  <link rel="manifest" href="manifest.webmanifest?v=1.2.0" />
+  <link rel="icon" href="assets/icons/favicon-32.png" sizes="32x32" />
+  <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png" />
+  <link rel="stylesheet" href="css/styles.css?v=1.2.0" />
+  <link rel="stylesheet" href="css/print.css?v=1.2.0" media="print" />
+</head>
+<body>
+
+<!-- ═══════════════ ICON SPRITE ═══════════════ -->
+<svg class="svg-sprite" aria-hidden="true" focusable="false">
+  <symbol id="i-dashboard" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="8" rx="2"/><rect x="14" y="3" width="7" height="5" rx="2"/><rect x="14" y="12" width="7" height="9" rx="2"/><rect x="3" y="15" width="7" height="6" rx="2"/></symbol>
+  <symbol id="i-transactions" viewBox="0 0 24 24"><path d="M4 8h13"/><path d="M14 5l3 3-3 3"/><path d="M20 16H7"/><path d="M10 13l-3 3 3 3"/></symbol>
+  <symbol id="i-wallet" viewBox="0 0 24 24"><path d="M4 7.5A2.5 2.5 0 0 1 6.5 5H18a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H6.5A2.5 2.5 0 0 1 4 16.5z"/><path d="M4 8h14"/><path d="M16 12h4v3h-4a1.5 1.5 0 0 1 0-3z"/></symbol>
+  <symbol id="i-target" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="4"/><circle cx="12" cy="12" r="1"/></symbol>
+  <symbol id="i-savings" viewBox="0 0 24 24"><path d="M19 12.5c0 4.1-3.1 7.5-7 7.5s-7-3.4-7-7.5S8.1 5 12 5s7 3.4 7 7.5z"/><path d="M9 12.5h6"/><path d="M12 9.5v6"/><path d="M5 9.5L3 8"/><path d="M19 9.5l2-1.5"/></symbol>
+  <symbol id="i-debt" viewBox="0 0 24 24"><path d="M12 4v16"/><path d="M6 8h12"/><path d="M4 8l-2 5h4z"/><path d="M20 8l-2 5h4z"/><path d="M8 20h8"/></symbol>
+  <symbol id="i-reports" viewBox="0 0 24 24"><path d="M6 3h8l4 4v14H6z"/><path d="M14 3v4h4"/><path d="M9 17v-3"/><path d="M12 17v-6"/><path d="M15 17v-4"/></symbol>
+  <symbol id="i-analytics" viewBox="0 0 24 24"><path d="M3 17l6-6 4 4 8-9"/><path d="M16 6h5v5"/></symbol>
+  <symbol id="i-calendar" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18"/><path d="M8 14h2M14 14h2M8 17.5h2"/></symbol>
+  <symbol id="i-recurring" viewBox="0 0 24 24"><path d="M20 7H8a4 4 0 0 0-4 4v1"/><path d="M17 4l3 3-3 3"/><path d="M4 17h12a4 4 0 0 0 4-4v-1"/><path d="M7 20l-3-3 3-3"/></symbol>
+  <symbol id="i-assistant" viewBox="0 0 24 24"><path d="M12 3l1.6 4.4L18 9l-4.4 1.6L12 15l-1.6-4.4L6 9l4.4-1.6z"/><path d="M18 15l.9 2.1L21 18l-2.1.9L18 21l-.9-2.1L15 18l2.1-.9z"/><path d="M5 15l.7 1.6L7.3 17l-1.6.7L5 19.3l-.7-1.6L2.7 17l1.6-.7z"/></symbol>
+  <symbol id="i-bell" viewBox="0 0 24 24"><path d="M18 8a6 6 0 1 0-12 0c0 5-2 6-2 6h16s-2-1-2-6"/><path d="M10 20a2.2 2.2 0 0 0 4 0"/></symbol>
+  <symbol id="i-settings" viewBox="0 0 24 24"><path d="M4 6h10M18 6h2M4 12h2M10 12h10M4 18h8M16 18h4"/><circle cx="16" cy="6" r="2"/><circle cx="8" cy="12" r="2"/><circle cx="14" cy="18" r="2"/></symbol>
+  <symbol id="i-users" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20a6.5 6.5 0 0 1 13 0"/><path d="M16 4.8a3.5 3.5 0 0 1 0 6.4"/><path d="M18.5 14.5A6.5 6.5 0 0 1 22 20"/></symbol>
+  <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+  <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></symbol>
+  <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></symbol>
+  <symbol id="i-moon" viewBox="0 0 24 24"><path d="M20 15.2A8.5 8.5 0 0 1 8.8 4a8.5 8.5 0 1 0 11.2 11.2z"/></symbol>
+  <symbol id="i-chevron-down" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></symbol>
+  <symbol id="i-arrow-up-right" viewBox="0 0 24 24"><path d="M7 17L17 7M9 7h8v8"/></symbol>
+  <symbol id="i-arrow-down-left" viewBox="0 0 24 24"><path d="M17 7L7 17M15 17H7V9"/></symbol>
+  <symbol id="i-transfer" viewBox="0 0 24 24"><path d="M4 7h13l-3-3M20 17H7l3 3"/></symbol>
+  <symbol id="i-more" viewBox="0 0 24 24"><circle cx="5" cy="12" r="1.4" fill="currentColor" stroke="none"/><circle cx="12" cy="12" r="1.4" fill="currentColor" stroke="none"/><circle cx="19" cy="12" r="1.4" fill="currentColor" stroke="none"/></symbol>
+  <symbol id="i-close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="M4 12l5 5L20 6"/></symbol>
+  <symbol id="i-filter" viewBox="0 0 24 24"><path d="M3 5h18l-7 8v6l-4 2v-8z"/></symbol>
+  <symbol id="i-download" viewBox="0 0 24 24"><path d="M12 3v12M7 10l5 5 5-5"/><path d="M4 20h16"/></symbol>
+  <symbol id="i-printer" viewBox="0 0 24 24"><path d="M7 8V3h10v5"/><rect x="3" y="8" width="18" height="9" rx="2"/><path d="M7 14h10v7H7z"/></symbol>
+  <symbol id="i-edit" viewBox="0 0 24 24"><path d="M4 20l4.5-1L20 7.5a2.1 2.1 0 0 0-3-3L5.5 16z"/><path d="M14.5 6.5l3 3"/></symbol>
+  <symbol id="i-trash" viewBox="0 0 24 24"><path d="M4 7h16M9 7V4h6v3M6 7l1 14h10l1-14"/><path d="M10 11v6M14 11v6"/></symbol>
+  <symbol id="i-send" viewBox="0 0 24 24"><path d="M21 3L3 10l7 3 3 7z"/><path d="M10 13l5-5"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M9 12l2 2 4-4"/></symbol>
+  <symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.5 3.5 5.5 3.5 9s-1 6.5-3.5 9c-2.5-2.5-3.5-5.5-3.5-9s1-6.5 3.5-9z"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></symbol>
+  <symbol id="i-bank" viewBox="0 0 24 24"><path d="M3 9l9-6 9 6"/><path d="M5 9h14M4 21h16M6 9v9M10 9v9M14 9v9M18 9v9"/></symbol>
+  <symbol id="i-card" viewBox="0 0 24 24"><rect x="2.5" y="5" width="19" height="14" rx="3"/><path d="M2.5 10h19"/><path d="M7 15h3"/></symbol>
+  <symbol id="i-cash" viewBox="0 0 24 24"><rect x="2.5" y="6" width="19" height="12" rx="2"/><circle cx="12" cy="12" r="3"/><path d="M6 9.5h.01M18 14.5h.01"/></symbol>
+  <symbol id="i-mobile" viewBox="0 0 24 24"><rect x="6" y="2" width="12" height="20" rx="3"/><path d="M10.5 18.5h3"/></symbol>
+  <symbol id="i-logout" viewBox="0 0 24 24"><path d="M9 4H5a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h4"/><path d="M15 8l4 4-4 4M19 12H9"/></symbol>
+  <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+  <symbol id="i-lock" viewBox="0 0 24 24"><rect x="4" y="10" width="16" height="11" rx="2.5"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/><path d="M12 14v3"/></symbol>
+  <symbol id="i-eye" viewBox="0 0 24 24"><path d="M2 12s3.5-6 10-6 10 6 10 6-3.5 6-10 6S2 12 2 12z"/><circle cx="12" cy="12" r="2.5"/></symbol>
+  <symbol id="i-upload" viewBox="0 0 24 24"><path d="M12 21V9M7 14l5-5 5 5"/><path d="M4 4h16"/></symbol>
+  <symbol id="i-spark" viewBox="0 0 24 24"><path d="M12 2l2.2 6.1L20 10l-5.8 1.9L12 18l-2.2-6.1L4 10l5.8-1.9z"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+  <symbol id="i-file" viewBox="0 0 24 24"><path d="M6 3h8l4 4v14H6z"/><path d="M14 3v4h4"/><path d="M9 12h6M9 16h6"/></symbol>
+</svg>
+
+<!-- ═══════════════ AUTH ═══════════════ -->
+<section id="authView" class="auth" aria-label="Sign in to HisabPro">
+  <div class="auth-visual">
+    <div class="auth-visual-inner">
+      <a class="brand brand--light" href="#" data-route="auth">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><rect x="3" y="12" width="4" height="8" rx="1.4" fill="currentColor"/><rect x="10" y="8" width="4" height="12" rx="1.4" fill="currentColor"/><rect x="17" y="4" width="4" height="16" rx="1.4" fill="#D8F26B"/><circle cx="5" cy="7" r="1.6" fill="#D8F26B"/></svg>
+        </span>
+        <span class="brand-name">Hisab<span>Pro</span></span>
+      </a>
+      <div class="auth-hero-copy">
+        <span class="eyebrow light"><span class="dot"></span> Built for Bangladesh · ৳ BDT</span>
+        <h1>One platform.<br />Every account.<br /><em>Complete control.</em></h1>
+        <p>Track income, expenses, budgets, savings and debts across your personal, family and business life — with clear, truthful numbers.</p>
+        <div class="auth-badges">
+          <span><svg class="icon"><use href="#i-globe"/></svg> বাংলা + English</span>
+          <span><svg class="icon"><use href="#i-shield"/></svg> Workspace isolation</span>
+          <span><svg class="icon"><use href="#i-mobile"/></svg> Works offline</span>
+        </div>
+      </div>
+      <div class="auth-preview" aria-hidden="true">
+        <div class="auth-preview-top">
+          <div>
+            <span class="mini-label">Total balance</span>
+            <strong>৳ 4,82,650</strong>
+          </div>
+          <span class="pill pill--success"><svg class="icon"><use href="#i-arrow-up-right"/></svg> 12.4%</span>
+        </div>
+        <div class="auth-preview-chart">
+          <svg viewBox="0 0 340 92" preserveAspectRatio="none">
+            <defs>
+              <linearGradient id="authArea" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#D8F26B" stop-opacity=".38"/>
+                <stop offset="100%" stop-color="#D8F26B" stop-opacity="0"/>
+              </linearGradient>
+            </defs>
+            <path d="M0,70 C25,64 38,42 62,48 C88,55 96,30 122,34 C145,38 154,58 180,50 C206,42 214,20 242,24 C268,28 280,10 306,14 L340,9 L340,92 L0,92 Z" fill="url(#authArea)"/>
+            <path d="M0,70 C25,64 38,42 62,48 C88,55 96,30 122,34 C145,38 154,58 180,50 C206,42 214,20 242,24 C268,28 280,10 306,14 L340,9" fill="none" stroke="#D8F26B" stroke-width="2.4" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <div class="auth-preview-foot">
+          <div><span class="mini-dot income"></span> Income <b>৳ 1,24,000</b></div>
+          <div><span class="mini-dot expense"></span> Expense <b>৳ 71,350</b></div>
+          <div><span class="mini-dot savings"></span> Saved <b>৳ 52,650</b></div>
+        </div>
+      </div>
+      <p class="auth-legal">Planning-stage product demo. Data is stored only on this device.</p>
+    </div>
+  </div>
+
+  <div class="auth-panel">
+    <div class="auth-card">
+      <div class="auth-card-head">
+        <span class="eyebrow"><span class="dot"></span> Welcome to HisabPro</span>
+        <h2 id="authTitle">Sign in to your account</h2>
+        <p id="authSubtitle">Your financial intelligence workspace is ready.</p>
+      </div>
+      <div class="auth-tabs" role="tablist">
+        <button class="auth-tab is-active" data-auth-tab="signin" role="tab" aria-selected="true">Sign in</button>
+        <button class="auth-tab" data-auth-tab="signup" role="tab" aria-selected="false">Create account</button>
+      </div>
+      <form id="authForm" class="auth-form" novalidate>
+        <div class="field signup-only hidden">
+          <label for="authName">Full name</label>
+          <input id="authName" name="name" type="text" placeholder="e.g. Rahim Ahmed" autocomplete="name" />
+        </div>
+        <div class="field">
+          <label for="authEmail">Email address</label>
+          <input id="authEmail" name="email" type="email" placeholder="you@example.com" autocomplete="email" required />
+        </div>
+        <div class="field">
+          <label for="authPassword">Password</label>
+          <div class="input-wrap">
+            <input id="authPassword" name="password" type="password" placeholder="At least 6 characters" autocomplete="current-password" required minlength="6" />
+            <button class="input-action" type="button" id="togglePassword" aria-label="Show password"><svg class="icon"><use href="#i-eye"/></svg></button>
+          </div>
+        </div>
+        <div class="signup-only hidden">
+          <div class="field">
+            <label>First workspace</label>
+            <div class="choice-row" id="signupWorkspaceChoices">
+              <label class="choice"><input type="radio" name="wsType" value="personal" checked /><span><b>Personal</b><small>Private finances</small></span></label>
+              <label class="choice"><input type="radio" name="wsType" value="family" /><span><b>Family</b><small>Shared household</small></span></label>
+              <label class="choice"><input type="radio" name="wsType" value="business" /><span><b>Business</b><small>Company books</small></span></label>
+            </div>
+          </div>
+          <div class="field">
+            <label>Language</label>
+            <div class="choice-row choice-row--2">
+              <label class="choice"><input type="radio" name="language" value="en" checked /><span><b>English</b><small>English interface</small></span></label>
+              <label class="choice"><input type="radio" name="language" value="bn" /><span><b>বাংলা</b><small>বাংলা ইন্টারফেস</small></span></label>
+            </div>
+          </div>
+        </div>
+        <p class="form-error hidden" id="authError" role="alert"></p>
+        <button class="btn btn--primary btn--lg btn--full" type="submit" id="authSubmit">Sign in</button>
+      </form>
+      <div class="auth-divider"><span>or explore instantly</span></div>
+      <button class="btn btn--ghost btn--lg btn--full" id="demoBtn">
+        <svg class="icon"><use href="#i-spark"/></svg> Try the demo with sample data
+      </button>
+      <p class="auth-note"><svg class="icon"><use href="#i-lock"/></svg> Demo authentication. No server, no real banking connection.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ APP ═══════════════ -->
+<div id="app" class="app-shell hidden">
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-top">
+      <a class="brand brand--light" href="#/dashboard" data-route="dashboard">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><rect x="3" y="12" width="4" height="8" rx="1.4" fill="currentColor"/><rect x="10" y="8" width="4" height="12" rx="1.4" fill="currentColor"/><rect x="17" y="4" width="4" height="16" rx="1.4" fill="#D8F26B"/><circle cx="5" cy="7" r="1.6" fill="#D8F26B"/></svg>
+        </span>
+        <span class="brand-name">Hisab<span>Pro</span></span>
+      </a>
+      <button class="workspace-switch" id="workspaceSwitch" aria-haspopup="listbox">
+        <span class="ws-avatar" id="wsAvatar">P</span>
+        <span class="ws-meta"><small data-i18n="common.workspace">Workspace</small><b id="wsName">Personal</b></span>
+        <svg class="icon"><use href="#i-chevron-down"/></svg>
+      </button>
+      <div class="workspace-menu hidden" id="workspaceMenu" role="listbox"></div>
+    </div>
+
+    <nav class="side-nav" aria-label="Primary">
+      <div class="nav-group">
+        <span class="nav-label" data-i18n="nav.group.overview">Overview</span>
+        <a class="nav-item is-active" href="#/dashboard" data-route="dashboard"><svg class="icon"><use href="#i-dashboard"/></svg><span data-i18n="nav.dashboard">Dashboard</span></a>
+        <a class="nav-item" href="#/reports" data-route="reports"><svg class="icon"><use href="#i-reports"/></svg><span data-i18n="nav.reports">Reports</span></a>
+        <a class="nav-item" href="#/analytics" data-route="analytics"><svg class="icon"><use href="#i-analytics"/></svg><span data-i18n="nav.analytics">Analytics</span></a>
+      </div>
+      <div class="nav-group">
+        <span class="nav-label" data-i18n="nav.group.money">Money</span>
+        <a class="nav-item" href="#/transactions" data-route="transactions"><svg class="icon"><use href="#i-transactions"/></svg><span data-i18n="nav.transactions">Transactions</span><span class="nav-count" id="txNavCount"></span></a>
+        <a class="nav-item" href="#/accounts" data-route="accounts"><svg class="icon"><use href="#i-wallet"/></svg><span data-i18n="nav.accounts">Accounts</span></a>
+        <a class="nav-item" href="#/budgets" data-route="budgets"><svg class="icon"><use href="#i-target"/></svg><span data-i18n="nav.budgets">Budgets</span></a>
+        <a class="nav-item" href="#/savings" data-route="savings"><svg class="icon"><use href="#i-savings"/></svg><span data-i18n="nav.savings">Savings</span></a>
+        <a class="nav-item" href="#/debts" data-route="debts"><svg class="icon"><use href="#i-debt"/></svg><span data-i18n="nav.debts">Debts</span></a>
+      </div>
+      <div class="nav-group">
+        <span class="nav-label" data-i18n="nav.group.planning">Planning</span>
+        <a class="nav-item" href="#/recurring" data-route="recurring"><svg class="icon"><use href="#i-recurring"/></svg><span data-i18n="nav.recurring">Recurring</span></a>
+        <a class="nav-item" href="#/calendar" data-route="calendar"><svg class="icon"><use href="#i-calendar"/></svg><span data-i18n="nav.calendar">Calendar</span></a>
+      </div>
+      <div class="nav-group">
+        <span class="nav-label" data-i18n="nav.group.intelligence">Intelligence</span>
+        <a class="nav-item" href="#/assistant" data-route="assistant"><svg class="icon"><use href="#i-assistant"/></svg><span data-i18n="nav.assistant">AI Assistant</span></a>
+        <a class="nav-item" href="#/notifications" data-route="notifications"><svg class="icon"><use href="#i-bell"/></svg><span data-i18n="nav.notifications">Notifications</span><span class="nav-count alert" id="notifNavCount">3</span></a>
+      </div>
+      <div class="nav-group">
+        <span class="nav-label" data-i18n="nav.group.workspace">Workspace</span>
+        <a class="nav-item" href="#/members" data-route="members"><svg class="icon"><use href="#i-users"/></svg><span data-i18n="nav.members">Members</span></a>
+        <a class="nav-item" href="#/settings" data-route="settings"><svg class="icon"><use href="#i-settings"/></svg><span data-i18n="nav.settings">Settings</span></a>
+      </div>
+    </nav>
+
+    <div class="sidebar-foot">
+      <div class="sync-chip" id="syncChip"><span class="sync-dot"></span><span id="syncText">Saved on this device</span></div>
+      <div class="side-user">
+        <span class="avatar" id="sideAvatar">RA</span>
+        <span class="side-user-meta"><b id="sideUserName">Rahim Ahmed</b><small id="sideUserRole">Workspace owner</small></span>
+        <button class="icon-btn subtle" id="signOutSide" title="Sign out" aria-label="Sign out"><svg class="icon"><use href="#i-logout"/></svg></button>
+      </div>
+    </div>
+  </aside>
+
+  <div class="main-wrap">
+    <header class="topbar">
+      <button class="icon-btn mobile-only" id="mobileMenuBtn" aria-label="Open menu"><svg class="icon"><use href="#i-menu"/></svg></button>
+      <div class="mobile-brand">
+        <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="12" width="4" height="8" rx="1.4" fill="currentColor"/><rect x="10" y="8" width="4" height="12" rx="1.4" fill="currentColor"/><rect x="17" y="4" width="4" height="16" rx="1.4" fill="#D8F26B"/><circle cx="5" cy="7" r="1.6" fill="#D8F26B"/></svg></span>
+        <span>HisabPro</span>
+      </div>
+      <div class="topbar-titles">
+        <h1 id="pageTitle">Dashboard</h1>
+        <p id="pageSubtitle">Your financial picture at a glance</p>
+      </div>
+      <div class="topbar-actions">
+        <button class="search-trigger" id="searchTrigger" aria-label="Search transactions">
+          <svg class="icon"><use href="#i-search"/></svg>
+          <span data-i18n="common.search">Search</span>
+          <kbd>⌘ K</kbd>
+        </button>
+        <button class="icon-btn" id="langToggle" title="Switch language" aria-label="Switch language"><svg class="icon"><use href="#i-globe"/></svg><span class="lang-code" id="langCode">EN</span></button>
+        <button class="icon-btn" id="themeToggle" title="Toggle theme" aria-label="Toggle theme"><svg class="icon theme-icon-light"><use href="#i-moon"/></svg><svg class="icon theme-icon-dark"><use href="#i-sun"/></svg></button>
+        <button class="icon-btn notif-btn" id="notifBtn" title="Notifications" aria-label="Notifications"><svg class="icon"><use href="#i-bell"/></svg><span class="notif-dot" id="notifDot"></span></button>
+        <button class="avatar avatar--btn" id="profileBtn" aria-label="Profile menu">RA</button>
+      </div>
+    </header>
+
+    <main id="view" class="view" tabindex="-1"></main>
+  </div>
+
+  <nav class="bottom-nav" aria-label="Mobile primary">
+    <a class="bottom-item is-active" href="#/dashboard" data-route="dashboard"><svg class="icon"><use href="#i-dashboard"/></svg><span data-i18n="nav.home">Home</span></a>
+    <a class="bottom-item" href="#/transactions" data-route="transactions"><svg class="icon"><use href="#i-transactions"/></svg><span data-i18n="nav.activity">Activity</span></a>
+    <button class="bottom-fab" id="mobileAddBtn" aria-label="Add transaction"><svg class="icon"><use href="#i-plus"/></svg></button>
+    <a class="bottom-item" href="#/budgets" data-route="budgets"><svg class="icon"><use href="#i-target"/></svg><span data-i18n="nav.budgets">Budgets</span></a>
+    <button class="bottom-item" id="mobileMoreBtn" aria-label="More"><svg class="icon"><use href="#i-more"/></svg><span data-i18n="nav.more">More</span></button>
+  </nav>
+</div>
+
+<!-- overlays -->
+<div id="modalRoot" class="modal-root hidden" aria-live="polite">
+  <div class="modal-backdrop" data-close-modal></div>
+  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-head">
+      <div><h2 id="modalTitle">Title</h2><p id="modalSubtitle" class="modal-subtitle"></p></div>
+      <button class="icon-btn" data-close-modal aria-label="Close"><svg class="icon"><use href="#i-close"/></svg></button>
+    </div>
+    <div class="modal-body" id="modalBody"></div>
+    <div class="modal-foot" id="modalFoot"></div>
+  </div>
+</div>
+
+<div id="sheetRoot" class="sheet-root hidden">
+  <div class="sheet-backdrop" data-close-sheet></div>
+  <div class="sheet" role="dialog" aria-modal="true" aria-label="Quick actions">
+    <div class="sheet-handle"></div>
+    <div class="sheet-head"><h3 data-i18n="nav.quickActions">Quick actions</h3><button class="icon-btn" data-close-sheet aria-label="Close"><svg class="icon"><use href="#i-close"/></svg></button></div>
+    <div class="sheet-actions" id="sheetActions"></div>
+  </div>
+</div>
+
+<div id="toastRoot" class="toast-root" aria-live="polite"></div>
+
+<!-- mobile drawer -->
+<div id="drawerRoot" class="drawer-root hidden">
+  <div class="drawer-backdrop" data-close-drawer></div>
+  <aside class="drawer">
+    <div class="drawer-head">
+      <div class="brand brand--light"><span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="12" width="4" height="8" rx="1.4" fill="currentColor"/><rect x="10" y="8" width="4" height="12" rx="1.4" fill="currentColor"/><rect x="17" y="4" width="4" height="16" rx="1.4" fill="#D8F26B"/><circle cx="5" cy="7" r="1.6" fill="#D8F26B"/></svg></span><span class="brand-name">Hisab<span>Pro</span></span></div>
+      <button class="icon-btn subtle" data-close-drawer aria-label="Close menu"><svg class="icon"><use href="#i-close"/></svg></button>
+    </div>
+    <div id="drawerNav" class="drawer-nav"></div>
+    <div id="drawerFoot" class="drawer-foot"></div>
+  </aside>
+</div>
+
+<script src="js/i18n.js?v=1.2.0"></script>
+<script src="js/seed.js?v=1.2.0"></script>
+<script src="js/core.js?v=1.2.0"></script>
+<script src="js/views.js?v=1.2.0"></script>
+<script src="js/actions.js?v=1.2.0"></script>
+</body>
+</html>

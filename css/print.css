@@ -1,0 +1,32 @@
+/* HisabPro — print-friendly reports */
+@media print {
+  @page { size: A4; margin: 16mm; }
+
+  body { background: #fff !important; color: #111 !important; font-size: 11pt; }
+  .sidebar, .topbar, .bottom-nav, .toast-root, .modal-root, .sheet-root,
+  .drawer-root, .no-print, .page-head-actions, .report-tabs, .settings-nav,
+  .toolbar, .btn, .icon-btn, .nav-item, .section-head .link { display: none !important; }
+  .app-shell { display: block !important; }
+  .main-wrap { display: block !important; }
+  .view { padding: 0 !important; max-width: none !important; }
+  .card, .kpi, .analytic-card, .debt-stat, .budget-item, .account-card {
+    box-shadow: none !important;
+    border: 1px solid #d8d8d8 !important;
+    break-inside: avoid;
+  }
+  .card--accent, .budget-spotlight, .card--dark, .insight-card {
+    background: #f4f4f4 !important;
+    color: #111 !important;
+  }
+  .budget-spotlight .spot-sub, .budget-spotlight .spot-foot { color: #555 !important; }
+  .grid--4 { display: grid !important; grid-template-columns: repeat(4, 1fr) !important; gap: 8px !important; }
+  .grid--dash, .report-grid, .calendar-layout { display: block !important; }
+  .grid--dash > *, .report-grid > * { margin-bottom: 12px; }
+  .chart-svg { max-width: 100%; }
+  .print-header { display: block !important; margin-bottom: 18px; border-bottom: 2px solid #0b7a58; padding-bottom: 10px; }
+  .print-header h1 { font-size: 20pt; letter-spacing: -.03em; }
+  .print-header p { font-size: 9pt; color: #555; margin-top: 3px; }
+  .print-footer { display: block !important; margin-top: 20px; padding-top: 8px; border-top: 1px solid #ccc; font-size: 8pt; color: #666; }
+  a { color: inherit; text-decoration: none; }
+}
+.print-header, .print-footer { display: none; }

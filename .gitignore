@@ -1,0 +1,23 @@
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editors
+.vscode/
+.idea/
+*.swp
+
+# Logs and local servers
+*.log
+server.log
+
+# Node / Wrangler (not required by this static app)
+node_modules/
+.wrangler/
+dist/
+
+# Local environment and secrets
+.env
+.env.*
+!.env.example
