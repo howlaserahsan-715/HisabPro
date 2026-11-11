@@ -4,6 +4,13 @@ A responsive, bilingual (English / বাংলা), offline-capable finance das
 `HisabPro_Complete_Product_Blueprint.docx` product specification. No backend or build step is
 required: it is a static Progressive Web App that keeps all data in the browser.
 
+## Live app
+
+**https://hisabpro.pages.dev**
+
+Hosted on Cloudflare Pages. Every push to the `main` branch deploys automatically.
+Use **“Try the demo with sample data”** on the sign-in screen to explore it.
+
 ## Run it
 
 1. Double-click **`serve.bat`** (uses Python's built-in HTTP server).
@@ -30,6 +37,20 @@ python -m http.server 8080 --bind 0.0.0.0
 Find your PC's local IP (for example `192.168.0.12`) and open `http://192.168.0.12:8080` on the
 phone. The responsive layout works in the mobile browser. Installing it as a PWA from a LAN address
 requires HTTPS; `localhost` on the PC is treated as a secure context automatically.
+
+## Deploy on Cloudflare Pages
+
+This repository is already connected to Cloudflare Pages through the GitHub integration:
+
+| Setting | Value |
+| --- | --- |
+| Production branch | `main` |
+| Framework preset | `None` |
+| Build command | *(empty — no build step)* |
+| Build output directory | repository root |
+
+To publish an update, commit and push to `main`. Cloudflare Pages builds and deploys it
+automatically. No API token or GitHub Actions workflow is required.
 
 ## Install as an app
 
