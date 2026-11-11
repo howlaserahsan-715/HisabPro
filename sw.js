@@ -1,6 +1,6 @@
 /* HisabPro service worker — app-shell caching + offline support */
-const VERSION = 'hisabpro-v1.2.0';
-const ASSET_VERSION = '1.2.0';
+const VERSION = 'hisabpro-v1.2.1';
+const ASSET_VERSION = '1.2.1';
 const APP_SHELL = [
   './',
   './index.html',
@@ -12,6 +12,7 @@ const APP_SHELL = [
   './js/views.js?v=' + ASSET_VERSION,
   './js/actions.js?v=' + ASSET_VERSION,
   './manifest.webmanifest?v=' + ASSET_VERSION,
+  './robots.txt',
   './assets/icons/icon-192.png',
   './assets/icons/icon-512.png',
   './assets/icons/apple-touch-icon.png',
